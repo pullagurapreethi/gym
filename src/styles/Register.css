@@ -1,0 +1,157 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 40px 20px;
+}
+
+.register-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.register-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--brand);
+  margin-bottom: 4px;
+}
+
+.register-brand span {
+  color: var(--accent);
+}
+
+.register-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.register-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.rform-group {
+  margin-bottom: 18px;
+}
+
+.rform-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 7px;
+  letter-spacing: 0.3px;
+}
+
+.rform-group input,
+.rform-group select {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fafafa;
+  font-size: 15px;
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  appearance: none;
+}
+
+.rform-group input:focus,
+.rform-group select:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(91,79,207,0.12);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▾';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+  font-size: 13px;
+}
+
+.btn-register {
+  width: 100%;
+  padding: 14px;
+  background: var(--brand, #5b4fcf);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm, 8px);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  margin-top: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-register:hover {
+  background: var(--brand-dark, #3d34a5);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(91,79,207,0.25);
+}
+
+.btn-register:active {
+  transform: translateY(0);
+}
+
+.register-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.register-footer .btn-link {
+  background: none;
+  border: none;
+  color: var(--brand, #5b4fcf);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: color 0.22s ease;
+}
+
+.register-footer .btn-link:hover {
+  color: var(--brand-dark, #3d34a5);
+  text-decoration: underline;
+}
+
+.form-error {
+  background: #fff0ee;
+  border: 1px solid #ffbcb0;
+  color: #c0392b;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+}
+
+@media (max-width: 520px) {
+  .register-card {
+    padding: 36px 24px;
+  }
+}
